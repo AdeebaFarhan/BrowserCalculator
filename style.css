@@ -7,6 +7,9 @@ body {
     background-color: hsl(0, 5%, 4%);
 }
 
+
+
+
 #calculator {
     font-family: Arial, sans-serif;
     background-color: hsl(0, 0%, 15%);
@@ -86,5 +89,38 @@ button:active {
 }
 
 .operator-btn:active {
-    background-color: hsl(35, 100%, 75%);
+    background-color: hsl(119, 67%, 48%);
 }
+@media screen and (max-width: 768px) {
+    #calculator {
+        max-width: 90%; /* Adjust maximum width for smaller screens */
+        
+    }
+
+    #display {
+        width: calc(100% - 40px); /* Adjust display width for smaller screens */
+        font-size: 3rem; /* Decrease font size for smaller screens */
+        background-color: rgb(201, 208, 214);
+
+    }
+
+    #keys {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr); /* Maintain grid columns for smaller screens */
+        grid-auto-rows: 1fr; /* Ensure equal height for all rows */
+        gap: 10px; /* Add gap between buttons */
+        padding: 10px; /* Reduce padding for keys container */
+    }
+
+    button {
+        width: 100%; /* Ensure buttons take full width of grid cell */
+        height: 80px; /* Maintain button height */
+        font-size: 20px; /* Decrease font size for smaller screens */
+    }
+
+    button.num {
+        font-size: 1.2rem; /* Adjust font size of number buttons for smaller screens */
+    }
+    
+}
+
